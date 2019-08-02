@@ -9,8 +9,8 @@ pipeline {
         stage('Test') {
             steps {
                 //pybot samplePyApp/unitTests
-                //sh "for t in samplePyApp/unitTests/*.py; do python \"$t\"; done"
-                sh "python unitTests/app.py"
+                sh "for t in unitTests/*.py; do python \"$t\"; done"
+                //sh "python unitTests/app.py"
             }
         }
         stage('Publish') {
