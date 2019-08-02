@@ -10,7 +10,7 @@ pipeline {
             steps {
                 //pybot samplePyApp/unitTests
                 //sh "for t in samplePyApp/unitTests/*.py; do python \"$t\"; done"
-                sh "python samplePyApp/unitTests/app.py"
+                sh "python unitTests/app.py"
             }
         }
         stage('Publish') {
