@@ -23,7 +23,7 @@ pipeline {
         stage('Publish') {
             steps {
                 sh "echo 'Publishing to contaioner registry...'"
-                withKubeConfig([credentialsId: 'KubeSecret', serverUrl: 'https://10.40.235.147:6443']) {
+                withKubeConfig([credentialsId: '2d731f46-6853-49a6-9ce5-f6238dc25e48', serverUrl: 'https://10.40.235.147:6443']) {
                     sh 'kubectl create -f ${WORKSPACE}/deployment.yaml --namespace=valeria-mgmt'
                 }
                 sh "echo 'Successfully published!'"
